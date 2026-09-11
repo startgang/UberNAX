@@ -1,4 +1,4 @@
-# Testing
+# Test guide
 
 ## 📦 INSTALL UTILITIES
 ```bash
