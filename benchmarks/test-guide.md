@@ -35,8 +35,8 @@ stress-ng --cpu 6 --timeout 5m
 stress-ng --cpu 8 --timeout 5m
 stress-ng --cpu 12 --timeout 5m
 stress-ng --cpu 16 --timeout 5m
-stress-ng --cpu 22 --timeout 10m
 ```
+> 0 - all cores
 
 ## 🌡️ THROTTLED (THROTTLING DIAGNOSTICS)
 ```bash
