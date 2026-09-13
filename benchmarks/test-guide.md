@@ -7,6 +7,23 @@ sudo apt install stress-ng lm-sensors s-tui htop intel-gpu-tools powercap-utils 
 sudo sensors-detect --auto
 ```
 
+## 📥 DOWNLOAD SETPL SCRIPT
+```bash
+cd ~
+wget https://raw.githubusercontent.com/horshack-dpreview/setPL/master/setPL.sh
+chmod +x setPL.sh
+```
+
+## ⚠️ IMPORTANT NOTES
+```bash
+# Secure Boot must be disabled in BIOS, otherwise MSR/MMIO writes will be blocked
+sudo mokutil --sb-state
+
+# setPL.sh does not persist across reboots
+# BIOS resets PL1/PL2 to defaults on every boot
+# Use throttled daemon to re-apply limits automatically
+```
+
 ## ⚙️ POWER LIMITS (MSR)
 ```bash
 sudo ./setPL.sh 40 65
