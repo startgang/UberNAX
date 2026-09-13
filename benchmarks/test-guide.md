@@ -14,6 +14,54 @@ wget https://raw.githubusercontent.com/horshack-dpreview/setPL/master/setPL.sh
 chmod +x setPL.sh
 ```
 
+## 📦 INSTALL THROTTLED DAEMON
+```bash
+# Install git and python3-venv
+sudo apt install git python3-venv
+
+# Clone repository and install
+git clone https://github.com/erpalma/throttled.git
+cd throttled
+sudo ./install.sh
+```
+
+## ⚙️ CONFIGURE THROTTLED
+```bash
+# Edit config (set PL1_Tdp_W, PL2_Tdp_W, Trip_Temp_C)
+sudo nano /etc/throttled.conf
+
+# Restart service after changes
+sudo systemctl restart throttled
+sudo systemctl status throttled
+```
+
+Example `[AC]` section with comments:
+```ini
+[AC]
+# How often to re-apply limits (seconds)
+Update_Rate_s: 5
+# Long-term power limit (watts)
+PL1_Tdp_W: 75
+# Long-term time window (seconds)
+PL1_Duration_s: 28
+# Short-term power limit (watts)
+PL2_Tdp_W: 90
+# Short-term time window (seconds)
+PL2_Duration_S: 0.002
+# Temperature threshold for throttling (C)
+Trip_Temp_C: 95
+# cTDP mode: 0=normal, 1=down, 2=up
+cTDP: 0
+# Disable BD PROCHOT signal (experimental)
+Disable_BDPROCHOT: False
+```
+
+Restart service after changes:
+```bash
+sudo systemctl restart throttled
+sudo systemctl status throttled
+```
+
 ## ⚠️ IMPORTANT NOTES
 ```bash
 # Secure Boot must be disabled in BIOS, otherwise MSR/MMIO writes will be blocked
@@ -35,6 +83,15 @@ sudo rdmsr -p 0 0x610
 sudo wrmsr -p 0 0x610 <value>
 ```
 
+## 🌡️ THROTTLED (THROTTLING DIAGNOSTICS)
+```bash
+sudo systemctl stop throttled
+sudo /opt/throttled/venv/bin/throttled --monitor
+sudo systemctl start throttled
+sudo systemctl restart throttled
+sudo systemctl status throttled
+```
+
 ## 🖥️ MONITORING
 ```bash
 watch -n 1 'sensors; echo "---"; grep MHz /proc/cpuinfo'
@@ -54,15 +111,6 @@ stress-ng --cpu 12 --timeout 5m
 stress-ng --cpu 16 --timeout 5m
 ```
 > 0 - all cores
-
-## 🌡️ THROTTLED (THROTTLING DIAGNOSTICS)
-```bash
-sudo systemctl stop throttled
-sudo /opt/throttled/venv/bin/throttled --monitor
-sudo systemctl start throttled
-sudo systemctl restart throttled
-sudo systemctl status throttled
-```
 
 ## 🔋 BIOS / MSR DIAGNOSTICS
 ```bash
