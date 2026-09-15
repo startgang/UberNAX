@@ -9,6 +9,8 @@ iGPU:     Intel Arc Graphics (Meteor Lake)
 BIOS:     AMI Aptio 2.22.1293 (Topton Power Armor 18T)
 ```
 
+<img width="4032" height="3024" alt="IMG_20260914_224223_890" src="https://github.com/user-attachments/assets/bd04a3a7-6eee-400f-baf1-6f06fcb7d19c" />
+
 ## 📋 МЕТОДИКА ТЕСТИРОВАНИЯ
 ```bash
 # Нагрузка
@@ -35,6 +37,8 @@ sudo ./setPL.sh PL1 PL2
 
 ## 📊 РЕЗУЛЬТАТЫ: ЗАВОДСКАЯ АЛЮМИНИЕВАЯ ПЛАСТИНА
 
+<img width="1525" height="868" alt="image" src="https://github.com/user-attachments/assets/ec2bea64-a469-4de1-bb6f-7932d67734d7" />
+
 ### Зависимость частоты от числа ядер (TCC Offset = 30)
 ```ini
 | Ядер | 40/65W            | 75/90W            | 88/100W           |
@@ -58,13 +62,15 @@ sudo ./setPL.sh PL1 PL2
 | 16   | 86 Вт     | 80 Вт     | 72 Вт     |
 ```
 
-## 📈 СРАВНЕНИЕ: ДО И ПОСЛЕ ДОРАБОТКИ
+## 📈 СРАВНЕНИЕ: до и после доработки пластины
+
+<img width="866" height="749" alt="image" src="https://github.com/user-attachments/assets/af1fa24b-a6dd-4955-ba13-af589a8782cf" />
 
 ### Что изменено
 ```ini
 Заводская алюминиевая пластина 5-7 мм заменена на радиатор
 с тепловыми трубками той же толщины. Термопаста тонким
-слоем с обеих сторон (вместо прокладок).
+слоем с обеих сторон
 ```
 
 ### Сравнение результатов (TCC Offset = 15)
