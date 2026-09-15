@@ -8,4 +8,4 @@
 | [**enclosure**](./enclosure) | Корпус и внешние панели |
 | [**failures**](./failuresl) | Неудачные прототипы и отчеты об ошибках |
 | [**heatsink**](./heatsink) | Системы охлаждения и радиаторы |
-| [**motherboard**](./motherboard)] | Печатные платы и электроника |
+| [**motherboard**](./motherboard) | Печатные платы и электроника |
