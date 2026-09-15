@@ -11,7 +11,7 @@ BIOS:     AMI Aptio 2.22.1293
 
 <img width="4032" height="3024" alt="IMG_20260914_224223_890" src="https://github.com/user-attachments/assets/bd04a3a7-6eee-400f-baf1-6f06fcb7d19c" />
 
-Ссылка на [photos/topton-ultra9/](другие фото)
+> Ссылка на [другие фото](photos/topton-ultra9/)
 
 ## 📋 МЕТОДИКА ТЕСТИРОВАНИЯ
 ```bash
