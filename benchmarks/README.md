@@ -6,7 +6,7 @@ CPU:      Intel Core Ultra 9 (Meteor Lake-H)
 Ядра:     6 P-core + 8 E-core + 2 LP E-core
 iGPU:     Intel Arc Graphics (Meteor Lake)
 ОС:       Ubuntu Server 24.04
-BIOS:     AMI Aptio 2.22.1293 (Topton Power Armor 18T)
+BIOS:     AMI Aptio 2.22.1293
 ```
 
 <img width="4032" height="3024" alt="IMG_20260914_224223_890" src="https://github.com/user-attachments/assets/bd04a3a7-6eee-400f-baf1-6f06fcb7d19c" />
